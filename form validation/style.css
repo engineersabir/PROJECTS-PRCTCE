@@ -15,4 +15,10 @@
 }
 .container form{
 width: 90%;
+max-width: 500%;
+padding: 50px 30px 20px;
+background: white;
+border-radius: 4px;
+box-shadow: 0 4px 30px rgba(0, 0,0,0.5);
+position: relative;
 }
