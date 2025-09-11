@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -35,4 +36,24 @@ position: relative;
  }
  .input-group{
     width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+
  }
+ .input-group label{
+    flex-basis: 28%;
+
+ }
+.input-group input, .input-group textarea{
+    flex-basis: 60%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;   
+
+}
