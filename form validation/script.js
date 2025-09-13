@@ -9,4 +9,28 @@ function validateName(){
 if(name.length==0){
     nameError.innerHTML='Name is required';
 }
+if(!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)){
+ nameError.innerHTML=' Write full-Name  ';
+ return false;
+}
+nameError.innerHTML='valid';
+return true;
 } 
+function validatePhone(){
+   var phone= document.getElementById('contact-phone').value;
+
+   if (phone.length){
+    phoneError.innerHTML='Phone no. is required';
+    return false
+   }
+   if(phone.length!==10){
+    phoneError.innerHTML='Phone no. should be 10 digits';
+    return false;
+   }
+   if(!phone.match(/^[0-9]{10}$/)){
+    phoneError.innerHTML='phone no. is required';
+    return false;
+   }
+   phoneError.innerHTML=' no. entered successfully';
+   return true; 
+}
