@@ -34,6 +34,7 @@ function validatePhone(){
    phoneError.innerHTML=' no. entered successfully';
    return true; 
 }
+
 function validateEmail(){
     var email=document.getElementById('contact-email').value;
     if(email.length==0){
@@ -45,5 +46,17 @@ function validateEmail(){
         return false;
     }
     emailError.innerHTML=' how are you ';
+    return true;
+}
+
+function validateMessage(){
+    var message=document.getElementById('contact-message').value;
+    var required=30;
+    var left=required-message.length;
+    if(left>0){
+        emailError.innerHTML=left+'message is required'
+        return false;
+    }
+    messageError.innerHTML=' how to write message';
     return true;
 }
