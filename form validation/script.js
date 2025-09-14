@@ -60,3 +60,16 @@ function validateMessage(){
     messageError.innerHTML=' how to write message';
     return true;
 }
+
+function validateForm(){
+    if(!validateName()|| !validateEmail() || !validateMessage() || !validateMessage() ){
+        submitError.style.display='block';
+        submitError.innerHTML='Please fix error to  submit';
+        setTimeout(function(){
+            submitError.style.display='none';
+        },2000);
+        return false;
+    }
+
+
+    }
