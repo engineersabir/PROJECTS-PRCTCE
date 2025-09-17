@@ -10,6 +10,7 @@ html,body{
     width: 100%;
 }
 .button{
+    width: 67px;
     padding: 20px;
     margin: 0 3px;
     border: 2px solid black;
@@ -19,7 +20,9 @@ html,body{
 .row{
     margin: 8px 0;
 }
-.row input{
+.row .input{
+    height: 50px;
+    width: 300px;
     margin: 0;
     border: 2PX SOLID black;
     padding: 10px 38px;
