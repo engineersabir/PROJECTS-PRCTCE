@@ -17,7 +17,7 @@ h1,h2{
     margin-right: 10px;
 
 }
-.input-section input [type="number"],.input-section input[type="date"]{
+.input-section input[type="number"],.input-section input[type="date"]{
 padding: 6px;
 margin-right: 10px;
 }
