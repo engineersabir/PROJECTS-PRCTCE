@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+    <body>
     <div id="weather-container">
         <h2>Weather App</h2>
-        <input type="text"  id="city" placeholder=" Enter Your City">
+        <input type="text" id="city" placeholder="Enter Your City">
         <button onclick="getWeather()">Search</button>
-        <img  alt="weather-icon" id="weather-icon">
-        <div id="tem-div"></div>
+        <img alt="weather-icon" id="weather-icon">
+        <div id="temp-div"></div> <!-- ✅ fixed id -->
         <div id="weather-info"></div>
         <div id="hourly-forecast"></div>
     </div>
 
-
-
     <script src="script.js"></script>
 </body>
+
 </html>
