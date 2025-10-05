@@ -1,67 +1,54 @@
-let inputSlider=document.getElementById("inputSlide");
-let sliderValue=document.getElementById("sliderValue");
-let passBox=document.getElementById("passBox");
-let lowercase=document.getElementById("lowercase");
-let uppercase=document.getElementById("uppercase");
-let numbers=document.getElementById("numbers");
-let symbols=document.getElementById("symbols");
-let genBtn=document.getElementById("genBtn");
-let copyIcon=document.getElementById("copyIcon");
 
-sliderValue.textContent=inputSlider.value;
-inputSlider.addEventListener('input',()=>{
-sliderValue.textContent=inputSlider.value;
-})
-genBtn.addEventListener('click',()=>{
-    passBox.value=generatePassword();
+let inputSlider = document.getElementById("inputSlider");
+let sliderValue = document.getElementById("sliderValue");
+let passBox = document.getElementById("passBox");
+let lowercase = document.getElementById("lowercase");
+let uppercase = document.getElementById("uppercase");
+let numbers = document.getElementById("numbers");
+let symbols = document.getElementById("symbols");
+let genBtn = document.getElementById("genBtn");
+let copyIcon = document.getElementById("copyIcon");
+
+sliderValue.textContent = inputSlider.value;
+
+inputSlider.addEventListener("input", () => {
+  sliderValue.textContent = inputSlider.value;
 });
 
-let lowerchars='abcdefghijklmnopqrstuvwxyz';
-let upperchars='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-let allNumbers='0123456789';
-let allSymbols='~!@#$%^&*()_+';
+const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numberChars = "0123456789";
+const symbolChars = "~!@#$%^&*()_+-=[]{}|;:,.<>?";
 
-// Function to generate Password
+function generatePassword() {
+  let allChars = "";
+  if (lowercase.checked) allChars += lowerChars;
+  if (uppercase.checked) allChars += upperChars;
+  if (numbers.checked) allChars += numberChars;
+  if (symbols.checked) allChars += symbolChars;
 
-function generatePassword(){
+  if (allChars.length === 0) return "";
 
-    let genPassword='';
-    let allchars="";
-    allchars+=lowercase.checked?lowerchars:"";
-    allchars+=uppercase.checked?uppercase:"";
-    allchars+=numbers.checked?numbers:"";
-    allchars+=symbols.checked?symbols:"";
-
-    if(allchars=="" || allchars.length==0){
-        return genPassword;
-    }
-
-let i=1;
-while(i<=inputSlider.value)
-    {
-    
-
-    genPassword=allchars.charAt(Math.floor(Math.random()*upperchars.length));
-i++;
+  let password = "";
+  for (let i = 0; i < inputSlider.value; i++) {
+    password += allChars.charAt(Math.floor(Math.random() * allChars.length));
+  }
+  return password;
 }
-    return genPassword;
 
+genBtn.addEventListener("click", () => {
+  passBox.value = generatePassword();
+});
 
+copyIcon.addEventListener("click", () => {
+  if (passBox.value.length > 0) {
+    navigator.clipboard.writeText(passBox.value);
+    copyIcon.innerText = "check";
+    copyIcon.title = "Password Copied!";
 
-
-
-}
-copyIcon.addEventListener('click',()=>{
-    if(passBox.value!=""||passBox.value.length>=1){
-
-        navigator.clipboard.writeText(passBox.value);
-        copyIcon.innerText="check";
-        copyIcon.title="Password Copied";
-
-        setTimeout(()=>{
-            copyIcon.innerHTML='content-copy';
-            copyIcon.title="";
-        },3000)
-
-    }
+    setTimeout(() => {
+      copyIcon.innerText = "content_copy";
+      copyIcon.title = "";
+    }, 2000);
+  }
 });
