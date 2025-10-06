@@ -88,4 +88,14 @@ header ul a{
     border: 2px solid #727fde;
     text-decoration: none;
     color: lightgray;
+    border-radius: 50%;
+}
+.box-icons a:hover{
+    background-color: #727fde;
+    color: black;
+    box-shadow: 0 0 15px #727fde6f;
+    
+
+
+
 }
