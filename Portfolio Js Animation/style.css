@@ -257,7 +257,9 @@ header ul a{
     border: 1px solid gray;
     background-color: #080020b7;
     border-radius: 20px;
+    transition: 0.3s;
 }
+
 .card img{
     width: 80%;
     height: 505;
@@ -289,4 +291,35 @@ header ul a{
     height: 50%;
     object-fit: cover;
     mix-blend-mode: lighten;
+}
+.card button{
+    color: white;
+    padding: 5px 15px ;
+    border-radius: 10px;
+    border: 1px solid #727fde86;
+    box-shadow: 0 0 5px #727fde86;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    color: black;
+}
+.card button:hover{
+    box-shadow: 0 0 15px #727fde86;
+    opacity: 0.8;
+}
+.card:hover{
+box-shadow: 0 0 15px rgba(211, 211, 211, 0.5);
+}
+.card:nth-child(3){
+grid-row: span 2;
+height: 83vh;
+
+}
+.card:nth-child(3)p{
+    bottom: 12%;
+}
+.card:nth-child(3)h1{
+    bottom: 21%;
 }
