@@ -128,7 +128,7 @@ header ul a{
 .hero-info .hero-info-title{
     color: #727fde;
     padding: 8px 5px ;
-    border-radius: 1px solid #727fde77;
+    border: 1px solid #727fde77;
     width: 240px;
     background-color: #727fde88;
     box-shadow: 0 0 5px #727fde88;
@@ -368,7 +368,8 @@ height: 83vh;
     width: 50%;
     position: relative;
     cursor: pointer;
-    min-width: 0.5s;
+    /* min-width: 50%; */
+    transition: all 0.5s;
     mix-blend-mode: exclusion;
 
 }
