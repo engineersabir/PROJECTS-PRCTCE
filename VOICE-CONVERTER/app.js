@@ -1,22 +1,25 @@
-let speech=new SpeechSynthesisUtterance();
+let speech = new SpeechSynthesisUtterance();
+let voices = [];
+let voiceSelect = document.querySelector("select");
 
-let voices=[];
+function populateVoices() {
+    voices = window.speechSynthesis.getVoices();
+    voiceSelect.innerHTML = "";
+    voices.forEach((voice, i) => {
+        voiceSelect.options[i] = new Option(voice.name, i);
+    });
+    speech.voice = voices[0];
+}
 
-let voiceSelect=document.querySelector("select");
+window.speechSynthesis.onvoiceschanged = populateVoices;
+populateVoices();
 
-window.speechSynthesis.onvoiceschanged=()=>{
-voices=window.speechSynthesis.getVoices();
-speech.voice=[0];
+voiceSelect.addEventListener("change", () => {
+    speech.voice = voices[voiceSelect.value];
+});
 
-voices.forEach((voice,i)=>(voiceSelect.options[i]=new options(voice.name,i)));
-
-};
-
-voiceSelect.addEventListener("change",()=>{
-    speech.voice=voices[voiceSelect.value];
-})
-
-document.querySelector("button").addEventListener("click",()=>{
-    speech.text=document.querySelector("textarea").value;
+document.querySelector("button").addEventListener("click", () => {
+    speech.text = document.querySelector("textarea").value;
+    window.speechSynthesis.cancel(); // stop previous speech
     window.speechSynthesis.speak(speech);
-})
+});
