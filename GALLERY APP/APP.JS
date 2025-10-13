@@ -1,17 +1,16 @@
-let scrolContainer=document.querySelector(".gallery");
-let backBtn=document.getElementById("backBtn");
-let nextBtn=document.getElementById("nextBtn");
-scrolContainer.addEventListener("wheel",(evt)=>{
+let scrollContainer = document.querySelector(".gallery");
+let backBtn = document.getElementById("backBtn");
+let nextBtn = document.getElementById("nextBtn");
+
+scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
-    scrolContainer.scrollLeft+=evt.deltaY;
-    scrolContainer.style.scrollBehaviour="auto";
+    scrollContainer.scrollLeft += evt.deltaY;
 });
 
-nextBtn.addEventListener("click",()=>{
-    scrolContainer.style.scrollBehaviour="smooth";
-    scrolContainer.scrollLeft+=900;
+nextBtn.addEventListener("click", () => {
+    scrollContainer.scrollLeft += 900;
 });
-backBtn.addEventListener("click",()=>{
-    scrolContainer.style.scrollBehaviour="smooth";
-    scrolContainer.scrollLeft-=900;
+
+backBtn.addEventListener("click", () => {
+    scrollContainer.scrollLeft -= 900;
 });
