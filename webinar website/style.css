@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .container{
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+    background-image: url(images/background.png
+    )
+    ;
+    
+ }
