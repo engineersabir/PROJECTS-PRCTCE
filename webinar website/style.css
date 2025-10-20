@@ -4,11 +4,39 @@
     box-sizing: border-box;
 }
  .container{
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
-    position: absolute;
-    background-image: url(images/background.png
+    position: center;
+    background-image: url(Launching_page_img/images/background.png
     )
     ;
+    padding: 0 8%;
+    background-size: cover;
+ }
+ .content h1{
+
+font-size: 700;
+
+
+}
+ .content img{
+    padding-left: 0;
+width: 80px;
+height: 40px;
     
+ }
+
+ .content button{
+    border: 2px solid white;
+    background: transparent;
+    margin: 3px;
+    width: 100px;
+    height: 100x;
+ }
+
+ button img{
+    padding-right:10px ;
+    display: flex;
+    width: 30px;
+    height: 20px;
  }
