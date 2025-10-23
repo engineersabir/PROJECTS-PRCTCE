@@ -21,7 +21,28 @@
 
 .img-wrap{
     position: absolute;
+    width: 20px;
     left: 0;
     top: 0;
     overflow: hidden;
+}
+
+span{
+
+    width: 20px ;
+    height: 100%;
+    cursor: ew-resize;
+    background: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.arrow{
+    width: 40px;
+    position: absolute;
+    top: 50%
+    ;
+    margin-left: -20px;
+    margin-top: -20px;
 }
