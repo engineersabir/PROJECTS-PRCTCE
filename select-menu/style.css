@@ -42,7 +42,7 @@
 
 .options{
     width: 100%;
-    padding: 15px;
+    padding: 15px 0 15px 70;
     list-style: none;
     cursor:pointer;
     box-sizing: border-box;
@@ -53,4 +53,8 @@
     width: 25px;
     position: absolute;
     top: 12px;
+}
+
+.options:hover{
+    background: rgba(255, 255, 255, 0.7);
 }
