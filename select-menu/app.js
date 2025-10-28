@@ -15,4 +15,11 @@ for (let option of options) {
     list.classList.add("hide");
     arrowIcon.classList.remove("rotate");
   };
+  document.addEventListener("click", (e) => {
+  if (!selectfield.contains(e.target)) {
+    list.classList.add("hide");
+    arrowIcon.classList.remove("rotate");
+  }
+});
+
 }
