@@ -78,3 +78,37 @@ font-weight: 400;
     cursor: pointer;
 
 }
+.color-select{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.color-select p{
+    width: 75px;
+}
+
+.color-select{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+
+.color-1{
+    background: red;
+}
+
+
+.color-2{
+    background: blue;
+}
+.color-3{
+    background: green;
+}
+.color-3{
+    background: black;
+}
