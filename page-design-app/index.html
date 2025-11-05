@@ -6,85 +6,90 @@
     <title>Page-Design_App</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <div class="container">
       <div class="product">
         <div class="gallery">
-          <img src="images/image1.png" id="productImg" />
+          <img src="images/image1.png" id="productImg" alt="Product Image" />
           <div class="controls">
-            <span class="btn active "></span>
+            <span class="btn active"></span>
             <span class="btn"></span>
             <span class="btn"></span>
           </div>
         </div>
+
         <div class="details">
-          <h1>Casual T shirt</h1>
+          <h1>Casual T-Shirt</h1>
           <h2>$15.00</h2>
-          <p>wrangler is an American shirt brand for selling in winter</p>
+          <p>Wrangler is an American shirt brand popular for its winter collection.</p>
 
           <form>
+            <!-- Size Selection -->
             <div class="size-select">
               <p>Size</p>
-
-              <label for="small">
+              <label>
                 <input type="radio" name="size" id="small" />
                 <span>S</span>
               </label>
 
-              <label for="medium">
+              <label>
                 <input type="radio" name="size" id="medium" />
                 <span>M</span>
               </label>
 
-              <label for="large">
+              <label>
                 <input type="radio" name="size" id="large" />
                 <span>L</span>
               </label>
 
-              <label for="x-large">
+              <label>
                 <input type="radio" name="size" id="x-large" />
                 <span>XL</span>
               </label>
-              <label for="xx-large">
-                <input type="radio" name="size " id="xx-large" />
-                <span> XXL </span>
+
+              <label>
+                <input type="radio" name="size" id="xx-large" />
+                <span>XXL</span>
               </label>
             </div>
 
+            <!-- Color Selection -->
             <div class="color-select">
               <p>Color</p>
-
-              <label for="red">
+              <label>
                 <input type="radio" name="color" id="red" />
                 <span class="color-1"></span>
               </label>
 
-              
-              
-              <label for="green">
+              <label>
                 <input type="radio" name="color" id="green" />
                 <span class="color-2"></span>
               </label>
 
-              <label for="blue">
+              <label>
                 <input type="radio" name="color" id="blue" />
                 <span class="color-3"></span>
               </label>
 
-              <label for="black">
-                <input type="radio" name="color" id="4" />
+              <label>
+                <input type="radio" name="color" id="black" />
                 <span class="color-4"></span>
               </label>
-
             </div>
+
+            <!-- Quantity Selection -->
             <div class="quantity-select">
               <p>Quantity</p>
-              <input type="number" value="1">
+              <input type="number" value="1" min="1" />
             </div>
-            <button>Buy Now</button>
+
+            <button type="button">Buy Now</button>
           </form>
         </div>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
