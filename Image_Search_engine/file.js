@@ -14,7 +14,11 @@ async function searchImages() {
     
     const repsonse=await fetch(url);
     const data = await repsonse.json();
-    console.log(data);
+
+    const results=data.results;
+    results.map((result)=>{
+        image.src=results
+    })
 }
 searchForm.addEventListener("submit",(e)=>{
 
