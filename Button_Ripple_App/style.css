@@ -3,16 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    text-align: center;
-}
-.circle{
-    text-align: center;
-    height: 100px;
-    width: 100px;
-    border: 2px solid red;
-    border-radius: 100%;
+    margin: 0;
+    height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.btn{
+    background-color: pink;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    border-radius: 5px;
+
+    color: black;
 }
