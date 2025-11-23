@@ -1,20 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
+body {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: aliceblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
-.btn{
+
+.btn {
     background-color: pink;
     padding: 20px 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -24,27 +23,27 @@ body{
     color: black;
     overflow: hidden;
 }
-.btn span{
-    position: relative
-    ;
+
+.btn span {
+    position: relative;
     z-index: 1;
 }
 
-
-.btn::before{
+.btn::before {
     content: "";
     position: absolute;
     background-color: orange;
     width: 0;
-    height: 0px;
-    left: 50%;
-    top: 50%;
+    height: 0;
+    left: var(--xPos);
+    top: var(--yPos);
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    transition:  width 0.5s, height 0.4s ;
-
+    transition: width 0.5s, height 0.4s;
+    z-index: 0;
 }
-.btn:hover::before{
+
+.btn:hover::before {
     width: 300px;
     height: 300px;
 }
