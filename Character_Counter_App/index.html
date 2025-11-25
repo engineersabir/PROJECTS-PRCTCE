@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Character_Counter_App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Real_Time Character_COunyter</h2>
+      <textarea
+        id="textarea"
+        class="textarea"
+        cols="29"
+        rows="9"
+        placeholder="Please Write Your Text Here..."
+      ></textarea>
 
-    
+      <div class="counter-container">
+        <p>
+          Total Characters:
+          <span class="total-counter" id="total-counter">30</span>
+        </p>
+
+        <p>
+          Remaining::
+          <span class="total-counter" id="total-counter">30</span>
+        </p>
+      </div>
+    </div>
+
     <script src="file.js"></script>
-</body>
+  </body>
 </html>
