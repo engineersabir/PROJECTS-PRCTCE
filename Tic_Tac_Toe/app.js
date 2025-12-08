@@ -8,3 +8,14 @@ let turn1= "X";
 const changeTurn= ()=>{
 return changeTurn==="x"?"0":"X";
 }
+const checkWin=()=>{
+
+}
+
+//Game Logic
+
+let boxes=document.getElementsByClassName("box");
+Array.from(boxes).forEach(element=>{
+
+    let boxtext=document.querySelector(".boxtext");
+})
