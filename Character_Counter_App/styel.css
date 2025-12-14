@@ -1,45 +1,64 @@
-body{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    align-items: center;
-    background-color: salmon;
-    font-family: monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.container{
-    background-color: lightpink;
-    width: 400px;
-    padding: 20px;
-    margin: 5px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-.textarea{
-    resize: none;
-    width: 100%;
-    height: 100px;
-    font-size: 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 2px solid darkgray;
-
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
 }
 
-.counter-container{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5px;
+.container {
+  width: 330px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
-.counter-container p{
-    font-size: 18px;
-    color: gray;
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 600;
 }
-.total-counter{
-    color: slateblue;
+
+.textarea {
+  width: 100%;
+  height: 140px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  transition: 0.3s ease;
 }
-.remaining-counter{
-    color: orangered;
+
+.textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
+}
+
+.counter-container {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.counter-container p {
+  font-size: 14px;
+  color: #444;
+}
+
+.counter-container span {
+  font-weight: 600;
+  color: #111;
 }
