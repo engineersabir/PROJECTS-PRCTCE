@@ -53,7 +53,7 @@ function updateTestimonials() {
 
   idx = (idx + 1) % testimonials.length;
 
-  setTimeout(updateTestimonials, 3000);
+  setTimeout(updateTestimonials, 2000);
 }
 
 updateTestimonials();
