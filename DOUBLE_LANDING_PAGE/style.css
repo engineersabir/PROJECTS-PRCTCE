@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h1{
+    font-size: 100px;
+}
+
+.btnleft{
+    font-size: 20px;
+    font-weight: bolder;
+background-color: yellow;
+color: black;
+padding: 20px;
+border-radius: 40px;
+}
+
+.btnright{
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: black;
+    color: yellow;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.split{
+    width: 50%;
+    height: 100%;
+    top: 0;
+
+}
+
+.split.left{
+    position: absolute;
+    left: 0;
+    color: yellow;
+    background-color: black;
+
+}
+.split.right{
+    position: absolute;
+    right: 0;
+    background-color: yellow;
+    color: black;
+
+}
