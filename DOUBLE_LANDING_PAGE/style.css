@@ -59,3 +59,8 @@ background-size: cover;
 background-image: url("https://cellmart.pk/wp-content/uploads/2025/03/sam-s25-ultra-silverblue-cellmart-1-595x595.jpg");
 background-size: cover;
 }
+
+
+.left, .right{
+  transition: width 2s ease-in-out;
+}
