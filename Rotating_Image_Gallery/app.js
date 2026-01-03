@@ -1,27 +1,29 @@
-const imageContainer = document.querySelector(".imagecontainer");
-const prevEl = document.getElementById("pre");
+const imageContainer = document.querySelector(".image-container");
+const prevEl = document.getElementById("prev");
 const nextEl = document.getElementById("next");
 
 let x = 0;
 let timer;
+const step = 360 / 7; // matches image count
 
 prevEl.addEventListener("click", () => {
-    x += 45;
+    x += step;
     clearTimeout(timer);
     updateGallery();
 });
 
 nextEl.addEventListener("click", () => {
-    x -= 45;
+    x -= step;
     clearTimeout(timer);
     updateGallery();
 });
 
 function updateGallery() {
-    imageContainer.style.transform = `perspective(1000px) rotateY(${x}deg)`;
+    imageContainer.style.transform =
+        `perspective(1000px) rotateY(${x}deg)`;
 
     timer = setTimeout(() => {
-        x -= 45;
+        x -= step;
         updateGallery();
     }, 3000);
 }
