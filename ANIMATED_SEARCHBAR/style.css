@@ -34,13 +34,21 @@ body{
     width: 30px;
     position: absolute;
     right: 10px;   
+
+    transition: width 0.4s;
+    transition-delay: 1s;
 }
+
 .input{
     background-color: transparent;
     border: none;
     margin: 10px 50px ;
+    width: 100%;
     outline: none;
     color: rgb(100, 100, 100);
+    transition: width 2s;
+    transition-delay: 1s;
+
 }
 
 .active .search-bar-container{
