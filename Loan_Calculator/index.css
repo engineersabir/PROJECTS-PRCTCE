@@ -1,16 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-div{
-    background-color: azure;
-    color: black;
-    display: block;
-    align-items: center;
+body {
+    display: flex;
+    height: 100vh;
     justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-div{
-    width: 400px;
-    height: 200px;
+
+.container {
+    background: darkcyan;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+}
+
+.container p {
+    margin: 10px 0;
+}
+
+.input {
+    width: 100%;
+    font-size: 18px;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.payment {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 15px;
 }
