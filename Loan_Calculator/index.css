@@ -6,4 +6,11 @@
 div{
     background-color: azure;
     color: black;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+div{
+    width: 400px;
+    height: 200px;
 }
