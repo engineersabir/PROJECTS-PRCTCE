@@ -1,12 +1,19 @@
-function calculateLoan(){
-loanAmountValue=    document.getElementById("loan-amount").value;
-interestRatValue=document.getElementById("months-to-pay").value;
-MonthsTopayValue=document.getElementById("months-to-pay").value;
+function calculateLoan() {
+    const loanAmount = Number(document.getElementById("loan-amount").value);
+    const interestRate = Number(document.getElementById("interest-rate").value);
+    const monthsToPay = Number(document.getElementById("months-to-pay").value);
 
-interest=(loanAmountValue*(interestRatValue*0.01))/MonthsTopayValue;
+    const monthlyInterestRate = interestRate / 100 / 12;
 
-monthlyPayment=(loanAmountValue/MonthsTopayValue+interest).toFixed(2);
+    const monthlyPayment =
+        (loanAmount * monthlyInterestRate) /
+        (1 - Math.pow(1 + monthlyInterestRate, -monthsToPay));
 
-
-document.getElementById("payment").innerHTML=`Monthly Payment:${monthlyPayment}`;
+    document.getElementById("monthly-payment").innerText =
+        `$${monthlyPayment.toFixed(2)}`;
 }
+document.querySelectorAll("input").forEach(input => {
+    input.addEventListener("input", calculateLoan);
+});
+
+calculateLoan(); // initial load
