@@ -13,17 +13,17 @@
 
     <p>
         Loan Amount ($)
-        <input class="input" type="number" id="loan-amount" min="1" max="500000" value="10000">
+        <input onchange="calculateLoan()" class="input" type="number" id="loan-amount" min="1" max="500000" value="10000">
     </p>
 
     <p>
         Interest Rate (%)
-        <input class="input" type="number" id="interest-rate" min="1" max="100" value="10" step="0.1">
+        <input onchange="calculateLoan()" class="input" type="number" id="interest-rate" min="1" max="100" value="10" step="0.1">
     </p>
 
     <p>
         Months To Pay
-        <input class="input" type="number" id="months-to-pay" min="6" max="48" value="12">
+        <input onchange="calculateLoan()" class="input" type="number" id="months-to-pay" min="6" max="48" value="12">
     </p>
 
     <p class="payment">
